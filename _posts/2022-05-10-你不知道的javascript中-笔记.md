@@ -11,27 +11,28 @@ category: blog
 author: LZS_911
 description: blog
 excerpt: ''
+coverImage: '/assets/blog/image/cover.jpg'
 ogImage:
-  url: '/assets/blog/dynamic-routing/cover.jpg'
+  url: '/assets/blog/image/cover.jpg'
 ---
 
 ## 类型和语法
 
-1.  javascript 有七种内置类型(null、undefined、boolean、number、string、object、symbol) 除对象之外, 其他统称为 “基本类型”
+1. javascript 有七种内置类型(null、undefined、boolean、number、string、object、symbol) 除对象之外, 其他统称为 “基本类型”
 
-2.  `typeof null === "object"; //true`
+2. `typeof null === "object"; //true`
     正确的返回结果应该是 `null`, 但这个 `bug` 由来已久, 在 `javascript` 中已经存在了将近二十年, 也许永远不会修复, 因为这牵扯到太多的 `Web` 系统, "修复" 它会产生更多的 `bug`, 令许多系统无法正常工作.
     `null` 是基本类型中的唯一一个 “假值” 类型.
 
-3.  `javascript` 中的变量是没有类型的, 只有值才有. 变量可以随时持有任何类型的值.
+3. `javascript` 中的变量是没有类型的, 只有值才有. 变量可以随时持有任何类型的值.
 
-4.  很多开发人员将 `undefined` 和 `undeclared` 混为一谈，但在 `JavaScript` 中它们是两码事.
+4. 很多开发人员将 `undefined` 和 `undeclared` 混为一谈，但在 `JavaScript` 中它们是两码事.
     `undefined` 是值的一种。`undeclared` 则表示变量还没有被声明过.
 
-5.  使用 `delete` 运算符可以将单元从数组中删除，但是请注意，单元删除后，数
+5. 使用 `delete` 运算符可以将单元从数组中删除，但是请注意，单元删除后，数
     组的 `length` 属性并不会发生变化.
 
-6.  如果字符串键值能够被强制类型转换为十进制数字的话，它就会被当作数字索引来处理。
+6. 如果字符串键值能够被强制类型转换为十进制数字的话，它就会被当作数字索引来处理。
 
     ```javascript
     var a = [];
@@ -39,9 +40,9 @@ ogImage:
     a.length; // 14
     ```
 
-7.  JavaScript 中字符串是不可变的，而数组是可变的. 字符串不可变是指字符串的成员函数不会改变其原始值，而是创建并返回一个新的字符串. 而数组的成员函数都是在其原始值上进行操作.
+7. JavaScript 中字符串是不可变的，而数组是可变的. 字符串不可变是指字符串的成员函数不会改变其原始值，而是创建并返回一个新的字符串. 而数组的成员函数都是在其原始值上进行操作.
 
-8.  `42.toFixed(3)` 是无效语法，因为 . 被视为常量 42. 的一部分（如前所述），所以没有 . 属性访问运算符来调用 `toFixed` 方法。
+8. `42.toFixed(3)` 是无效语法，因为 . 被视为常量 42. 的一部分（如前所述），所以没有 . 属性访问运算符来调用 `toFixed` 方法。
 
     ```javascript
     // 无效语法
@@ -52,7 +53,7 @@ ogImage:
     42..toFixed( 3 ); // "42.000"
     ```
 
-9.  要检测一个值是否是整数，可以使用 `ES6` 中的 `Number.isInteger(..)` 方法
+9. 要检测一个值是否是整数，可以使用 `ES6` 中的 `Number.isInteger(..)` 方法
 
 10. undefined 类型只有一个值，即 undefined。null 类型也只有一个值，即 null。它们的名称既是类型也是值。
     undefined 和 null 常被用来表示“空的”值或“不是值”的值。二者之间有一些细微的差别。例如：

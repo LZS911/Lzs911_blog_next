@@ -10,9 +10,10 @@ star: true
 category: blog
 author: LZS_911
 description: blog
-excerpt: ''
+excerpt: '学习下平常工作中不太会用到的一些 Typescript 工具类型以及新特性'
+coverImage: '/assets/blog/image/cover.jpg'
 ogImage:
-  url: '/assets/blog/dynamic-routing/cover.jpg'
+  url: '/assets/blog/image/cover.jpg'
 ---
 
 ## 1. 将下划线模式的 string 类型转化成驼峰类型

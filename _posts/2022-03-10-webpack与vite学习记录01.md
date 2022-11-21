@@ -15,8 +15,9 @@ category: blog
 author: LZS_911
 description: blog
 excerpt: ''
+coverImage: '/assets/blog/image/cover.jpg'
 ogImage:
-  url: '/assets/blog/dynamic-routing/cover.jpg'
+  url: '/assets/blog/image/cover.jpg'
 ---
 
 ## Webpack Tree Shaking

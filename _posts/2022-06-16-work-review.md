@@ -13,8 +13,9 @@ category: blog
 author: LZS_911
 description: blog
 excerpt: ''
+coverImage: '/assets/blog/image/cover.jpg'
 ogImage:
-  url: '/assets/blog/dynamic-routing/cover.jpg'
+  url: '/assets/blog/image/cover.jpg'
 ---
 
 ## [前端代码覆盖率](https://juejin.cn/post/7022928631756226591)

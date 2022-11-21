@@ -13,8 +13,9 @@ category: blog
 author: LZS_911
 description: blog
 excerpt: ''
+coverImage: '/assets/blog/image/cover.jpg'
 ogImage:
-  url: '/assets/blog/dynamic-routing/cover.jpg'
+  url: '/assets/blog/image/cover.jpg'
 ---
 
 最近浏览知乎时看到一篇关于 `React Hooks` 的文章. 题目标题为 [React Hooks 使用误区，驳官方文档](https://zhuanlan.zhihu.com/p/450513902). 文章作者是社区知名 `aHooks` 库的作者, 初读文章时并没有感觉到什么奇怪, 平时开发过程中对于官方 `hooks` 的使用也大致与它描述的相同, 可能是原文标题攻击性过强, 当翻到评论区时, 对于 `useEffect` 的使用却是大片的反对声音, 甚至有人专门[另开一篇文章](https://www.zhihu.com/question/508780830)来讨论该篇文章. 最主要的原因来自 `useEffect` 的依赖项问题, 具体观点可以阅读原文了解, 本篇文章仅表述下自己的看法以及开发习惯.
