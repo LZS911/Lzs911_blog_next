@@ -1,4 +1,4 @@
-import type Author from './author';
+import type Author from "./author";
 
 type PostType = {
   slug: string;
@@ -12,7 +12,9 @@ type PostType = {
   };
   content: string;
   star: boolean;
-  category: 'blog' | 'project';
+  category: "blog" | "project";
+  theme: string;
+  tag: string[];
 };
 
 export default PostType;

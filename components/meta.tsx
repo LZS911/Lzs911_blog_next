@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { CMS_NAME, HOME_OG_IMAGE_URL } from "../lib/constants";
+import { HOME_OG_IMAGE_URL } from "../lib/constants";
 
 const Meta = () => {
   return (
@@ -27,6 +27,7 @@ const Meta = () => {
         href="/favicon/safari-pinned-tab.svg"
         color="#000000"
       />
+      {/* <link rel="stylesheet" href="https://unpkg.com/beautiful-markdown" /> */}
       <link rel="shortcut icon" href="/favicon/favicon.ico" />
       <meta name="msapplication-TileColor" content="#000000" />
       <meta name="msapplication-config" content="/favicon/browserconfig.xml" />

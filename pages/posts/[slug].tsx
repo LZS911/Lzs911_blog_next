@@ -11,6 +11,7 @@ import Head from "next/head";
 import { WEB_TITLE } from "../../lib/constants";
 import markdownToHtml from "../../lib/markdownToHtml";
 import type PostType from "../../interfaces/post";
+import cn from "classnames";
 
 type Props = {
   post: PostType;
@@ -31,7 +32,12 @@ export default function Post({ post, morePosts, preview }: Props) {
           <PostTitle>Loading…</PostTitle>
         ) : (
           <>
-            <article className="mb-32">
+            <article
+              className={cn({
+                "mb-32": true,
+                [`markdown-body-${post.theme}`]: !!post.theme,
+              })}
+            >
               <Head>
                 <title>
                   {post.title} | {WEB_TITLE}
@@ -68,9 +74,10 @@ export async function getStaticProps({ params }: Params) {
     "content",
     "ogImage",
     "coverImage",
+    "theme",
+    "tag",
   ]);
-  const allPosts = getAllPosts(["slug"]);
-  console.log(allPosts);
+  // const allPosts = getAllPosts(["slug"]);
   const content = await markdownToHtml(post.content || "");
 
   return {

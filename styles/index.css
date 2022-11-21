@@ -1,3 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("./theme/arknights.css");
+@import url("./theme/awesome-green.css");
+@import url("./theme/juejin.css");
