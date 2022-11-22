@@ -16,6 +16,7 @@ excerpt: ''
 coverImage: '/assets/blog/image/cover.jpg'
 ogImage:
   url: '/assets/blog/image/cover.jpg'
+theme: qklhk-chocolate  
 ---
 
 ## [前端代码覆盖率](https://juejin.cn/post/7022928631756226591)

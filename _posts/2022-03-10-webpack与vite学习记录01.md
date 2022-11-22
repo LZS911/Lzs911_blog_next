@@ -18,6 +18,7 @@ excerpt: ''
 coverImage: '/assets/blog/image/cover.jpg'
 ogImage:
   url: '/assets/blog/image/cover.jpg'
+theme: scrolls-light  
 ---
 
 ## Webpack Tree Shaking

@@ -16,6 +16,7 @@ excerpt: ''
 coverImage: '/assets/blog/image/cover.jpg'
 ogImage:
   url: '/assets/blog/image/cover.jpg'
+theme: arknights  
 ---
 
 在之前刷算法题时使用的语言一般是 `typescript`, 因为种种原因准备换成 `C++` 来刷题. 写点简单的算法题便不想使用厚重的各种 `IDE` 了, 于是最终选择了 `vscode`.

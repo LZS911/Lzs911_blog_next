@@ -16,6 +16,7 @@ excerpt: ''
 coverImage: '/assets/blog/image/cover.jpg'
 ogImage:
   url: '/assets/blog/image/cover.jpg'
+theme: geek-black  
 ---
 
 ## EventEmit 简介
