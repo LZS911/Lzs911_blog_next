@@ -1,0 +1,12 @@
+.mouse-effect-text {
+  position: absolute;
+  z-index: 9999999;
+  font-weight: bold;
+  /* user-select: none; */
+}
+
+@keyframes remove-mouse-effect {
+  100% {
+    opacity: 0;
+  }
+}

@@ -1,10 +1,8 @@
 import { useRouter } from "next/router";
 import ErrorPage from "next/error";
-import Container from "../../components/container";
 import PostBody from "../../components/post-body";
-import Header from "../../components/header";
+import Header from "../../components/page-header";
 import PostHeader from "../../components/post-header";
-import Layout from "../../components/layout";
 import { getPostBySlug, getAllPosts } from "../../lib/api";
 import PostTitle from "../../components/post-title";
 import Head from "next/head";
@@ -12,6 +10,7 @@ import { WEB_TITLE } from "../../lib/constants";
 import markdownToHtml from "../../lib/markdownToHtml";
 import type PostType from "../../interfaces/post";
 import cn from "classnames";
+import Layout from "../../components/layout";
 
 type Props = {
   post: PostType;
@@ -25,36 +24,12 @@ export default function Post({ post, morePosts, preview }: Props) {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <Layout preview={preview}>
-      <Container>
-        <Header />
-        {router.isFallback ? (
-          <PostTitle>Loading…</PostTitle>
-        ) : (
-          <>
-            <article
-              className={cn({
-                "mb-32": true,
-                [`markdown-body-${post.theme}`]: !!post.theme,
-              })}
-            >
-              <Head>
-                <title>
-                  {post.title} | {WEB_TITLE}
-                </title>
-                <meta property="og:image" content={post.ogImage.url} />
-              </Head>
-              <PostHeader
-                title={post.title}
-                coverImage={post.coverImage}
-                date={post.date}
-                author={post.author}
-              />
-              <PostBody content={post.content} />
-            </article>
-          </>
-        )}
-      </Container>
+    <Layout>
+      {router.isFallback ? (
+        <PostTitle>Loading…</PostTitle>
+      ) : (
+        <PostBody {...post} />
+      )}
     </Layout>
   );
 }

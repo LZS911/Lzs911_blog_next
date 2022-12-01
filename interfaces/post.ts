@@ -13,9 +13,13 @@ type PostType = {
   };
   content: string;
   star: boolean;
-  category: "blog" | "project";
+  category: "blog" | "project" | "page" | "talk";
   theme: Theme;
   tag: string[];
+};
+
+export type Items = {
+  [key in keyof PostType]?: PostType[key];
 };
 
 export default PostType;

@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "dev": "next",
+    "dev": "next --port=4545",
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc"
@@ -13,8 +13,11 @@
     "next": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "rehype-stringify": "^9.0.3",
     "remark": "^14.0.2",
+    "remark-gfm": "^3.0.1",
     "remark-html": "^15.0.1",
+    "remark-rehype": "^10.1.0",
     "typescript": "^4.7.4"
   },
   "devDependencies": {

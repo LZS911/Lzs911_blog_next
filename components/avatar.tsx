@@ -1,15 +1,21 @@
-type Props = {
-  name: string
-  picture: string
-}
+import Image, { ImageProps } from "next/image";
+import EmptyBox from "./empty-box";
 
-const Avatar:React.FC<Props> = ({ name, picture }) => {
+type Props = {
+  name: string;
+  picture: string;
+  showName?: boolean;
+} & Omit<ImageProps, "src" | "alt">;
+
+const Avatar: React.FC<Props> = ({ name, picture, showName, ...props }) => {
   return (
     <div className="flex items-center">
-      <img src={picture} className="w-12 h-12 rounded-full mr-4" alt={name} />
-      <div className="text-xl font-bold">{name}</div>
+      <Image src={picture} className=" rounded-full" alt={name} {...props} />
+      <EmptyBox if={showName}>
+        <div className="text-xl font-bold">{name}</div>
+      </EmptyBox>
     </div>
-  )
-}
+  );
+};
 
-export default Avatar
+export default Avatar;
