@@ -40,6 +40,6 @@ export function getAllPosts(fields: Array<keyof PostType> = []) {
   const slugs = getPostSlugs();
   const posts = slugs
     .map((slug) => getPostBySlug(slug, fields))
-    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
+    .sort((post1, post2) => ((post1?.date ?? 0) > (post2?.date ?? 0) ? -1 : 1));
   return posts;
 }
