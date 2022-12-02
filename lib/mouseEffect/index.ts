@@ -1,5 +1,3 @@
-import { MOUSE_CONTENT } from "../constants";
-
 const initMouseEffect = () => {
   document.body.addEventListener("click", genMouseClickEffect);
 };
@@ -14,9 +12,8 @@ const genMouseClickEffect = (e: MouseEvent) => {
   }
   let x = e.pageX;
   let y = e.pageY;
-  let randContent =
-    MOUSE_CONTENT[Math.ceil(Math.random() * MOUSE_CONTENT.length) - 1];
-  const { create, remove, setColor } = generateElement(x, y, randContent);
+
+  const { create, remove, setColor } = generateElement(x, y, "❤");
 
   create();
 
@@ -34,13 +31,18 @@ const genMouseClickEffect = (e: MouseEvent) => {
  * @param content 元素内容
  */
 const generateElement = (x: number, y: number, content: string) => {
-  const span = document.createElement("span");
+  const span = document?.createElement("span");
   const create = () => {
     let body = document.body;
+
+    if (!span || !body) {
+      return;
+    }
+
     span.innerHTML = content;
     span.className = "mouse-effect-text";
-    span.style.top = y - 20 + "px";
-    span.style.left = x - 50 + "px";
+    span.style.top = y - 8 + "px";
+    span.style.left = x - 8 + "px";
     span.style.animation = "remove-mouse-effect 2s";
     body.appendChild(span);
     let i = 0;
@@ -53,10 +55,16 @@ const generateElement = (x: number, y: number, content: string) => {
   };
 
   const remove = () => {
+    if (!span || !span.remove) {
+      return;
+    }
     span.remove();
   };
 
   const setColor = () => {
+    if (!span) {
+      return;
+    }
     const color = getRandomColor();
     span.style.color = color;
   };

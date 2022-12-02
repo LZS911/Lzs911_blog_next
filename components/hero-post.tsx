@@ -1,6 +1,6 @@
 import Link from "next/link";
-import PostType, { Items } from "../interfaces/post";
-import EmptyBox from "./empty-box";
+import { Items } from "../interfaces/post";
+import PostTitle from "./post-title";
 
 type Props = {
   posts: Items[];
@@ -10,16 +10,12 @@ type Props = {
 const HeroPost: React.FC<Props> = ({ posts, type }) => {
   return (
     <article className="max-w-3xl">
-      <div className="flex justify-center font-[Arial]">
-        <h1 className="text-5xl font-bold bg-indigo px-5 py-2 rounded-sm text-shadow-lg  leading-[1.1]">
-          {type}
-        </h1>
-      </div>
+      <PostTitle>{type}</PostTitle>
 
       <section>
         {posts.map((v) => {
           return (
-            <div key={v.title} className="mt-20 p-10 text-center">
+            <div key={v.title} className="mt-16 p-10 text-center">
               <h2 className="font-[Arial] text-shadow-de text-2xl tracking-wider font-bold text-black">
                 <Link
                   as={`/posts/${v.slug}`}
@@ -29,8 +25,8 @@ const HeroPost: React.FC<Props> = ({ posts, type }) => {
                   {v.title}
                 </Link>
               </h2>
-              <hr className=" border-b-indigo border-b-[1px] my-6" />
-              <span className="text-black opacity-70">
+              <hr className=" border-b-indigo border-b-[1px] my-4" />
+              <span className="text-black opacity-60 text-sm">
                 {v.excerpt || "excerpt"} {" | "}
                 <Link
                   as={`/posts/${v.slug}`}

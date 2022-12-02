@@ -1,5 +1,5 @@
 import Layout from "../components/layout";
-import { getPostBySlug, getAllPosts } from "../lib/api";
+import { getPostBySlug } from "../lib/api";
 import Head from "next/head";
 import { ABOUT_SLUG, WEB_TITLE } from "../lib/constants";
 import markdownToHtml from "../lib/markdownToHtml";

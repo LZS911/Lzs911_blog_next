@@ -2,7 +2,9 @@
   position: absolute;
   z-index: 9999999;
   font-weight: bold;
-  /* user-select: none; */
+  -webkit-user-select: none;
+  user-select: none;
+  white-space: pre-line;
 }
 
 @keyframes remove-mouse-effect {

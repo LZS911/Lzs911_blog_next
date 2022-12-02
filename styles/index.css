@@ -15,7 +15,11 @@ html {
 }
 
 body {
-  cursor: url("/public/assets/mouse/mouse-cursor.svg") auto;
+  cursor: url("/assets/mouse/mouse.svg"), auto;
+}
+
+a {
+  cursor: url("/assets/mouse/mouse-cursor.svg"), auto !important;
 }
 
 main,

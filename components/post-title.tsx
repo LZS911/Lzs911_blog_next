@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 
 type Props = {
   children?: ReactNode;
@@ -6,9 +6,11 @@ type Props = {
 
 const PostTitle: React.FC<Props> = ({ children }) => {
   return (
-    <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:leading-none mb-12 text-center md:text-left">
-      {children}
-    </h1>
+    <div className="flex justify-center font-[Arial]">
+      <h1 className="text-5xl font-bold bg-indigo px-5 py-2 rounded-sm text-shadow-lg  leading-[1.1]">
+        {children}
+      </h1>
+    </div>
   );
 };
 

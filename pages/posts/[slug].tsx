@@ -1,16 +1,13 @@
 import { useRouter } from "next/router";
 import ErrorPage from "next/error";
 import PostBody from "../../components/post-body";
-import Header from "../../components/page-header";
-import PostHeader from "../../components/post-header";
 import { getPostBySlug, getAllPosts } from "../../lib/api";
 import PostTitle from "../../components/post-title";
-import Head from "next/head";
-import { WEB_TITLE } from "../../lib/constants";
 import markdownToHtml from "../../lib/markdownToHtml";
 import type PostType from "../../interfaces/post";
-import cn from "classnames";
 import Layout from "../../components/layout";
+import EmptyBox from "../../components/empty-box";
+import DateFormatter from "../../components/date-formatter";
 
 type Props = {
   post: PostType;
@@ -25,11 +22,16 @@ export default function Post({ post, morePosts, preview }: Props) {
   }
   return (
     <Layout>
-      {router.isFallback ? (
-        <PostTitle>Loading…</PostTitle>
-      ) : (
-        <PostBody {...post} />
-      )}
+      <EmptyBox
+        if={!router.isFallback}
+        defaultNode={<PostTitle>Loading…</PostTitle>}
+      >
+        <article>
+          <PostTitle>{post.title}</PostTitle>
+          <DateFormatter dateString={post.date} />
+          <PostBody {...post} />
+        </article>
+      </EmptyBox>
     </Layout>
   );
 }
